@@ -1,0 +1,109 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+E:\aastudy\keil\资料\实验程序\基础实验例程\实验17：DS18B20温度传感器\template.uvproj
+Project File Date:  05/28/2019
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?TIMER0INIT?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?MAIN
+*** WARNING L15: MULTIPLE CALL TO SEGMENT
+    SEGMENT: ?PR?BUSY_CHECK?MAIN
+    CALLER1: ?PR?USART?MAIN
+    CALLER2: ?C_C51STARTUP
+Program Size: data=39.2 xdata=0 code=2316
+creating hex file from "template"...
+"template" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?TIMER0INIT?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?MAIN
+*** WARNING L15: MULTIPLE CALL TO SEGMENT
+    SEGMENT: ?PR?BUSY_CHECK?MAIN
+    CALLER1: ?PR?USART?MAIN
+    CALLER2: ?C_C51STARTUP
+Program Size: data=39.2 xdata=0 code=2328
+creating hex file from "template"...
+"template" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+USART.H(44): error C141: syntax error near 'dat', expected ')'
+USART.H(45): error C158: '_SendString': function contains unnamed parameter
+USART.H(48): error C202: 'dat': undefined identifier
+USART.H(51): error C202: 'dat': undefined identifier
+目标未创建
+Build target 'Target 1'
+compiling main.c...
+USART.H(53): error C202: 'NULL': undefined identifier
+compiling temp.c...
+目标未创建
+Build target 'Target 1'
+compiling main.c...
+USART.H(53): error C202: 'NULL': undefined identifier
+目标未创建
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?TIMER0INIT?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?MAIN
+*** WARNING L15: MULTIPLE CALL TO SEGMENT
+    SEGMENT: ?PR?BUSY_CHECK?MAIN
+    CALLER1: ?PR?USART?MAIN
+    CALLER2: ?C_C51STARTUP
+Program Size: data=39.2 xdata=0 code=2338
+creating hex file from "template"...
+"template" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?TIMER0INIT?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?MAIN
+*** WARNING L15: MULTIPLE CALL TO SEGMENT
+    SEGMENT: ?PR?BUSY_CHECK?MAIN
+    CALLER1: ?PR?USART?MAIN
+    CALLER2: ?C_C51STARTUP
+Program Size: data=39.2 xdata=0 code=2331
+creating hex file from "template"...
+"template" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?TIMER0INIT?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?MAIN
+*** WARNING L15: MULTIPLE CALL TO SEGMENT
+    SEGMENT: ?PR?BUSY_CHECK?MAIN
+    CALLER1: ?PR?USART?MAIN
+    CALLER2: ?C_C51STARTUP
+Program Size: data=39.2 xdata=0 code=2308
+creating hex file from "template"...
+"template" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?TIMER0INIT?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?MAIN
+*** WARNING L15: MULTIPLE CALL TO SEGMENT
+    SEGMENT: ?PR?BUSY_CHECK?MAIN
+    CALLER1: ?PR?USART?MAIN
+    CALLER2: ?C_C51STARTUP
+Program Size: data=39.2 xdata=0 code=2310
+creating hex file from "template"...
+"template" - 0 Error(s), 3 Warning(s).
