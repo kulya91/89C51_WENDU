@@ -186,7 +186,7 @@
       <Focus>0</Focus>
       <ColumnNumber>29</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>64</TopLine>
+      <TopLine>55</TopLine>
       <CurrentLine>64</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\main.c</PathWithFileName>
@@ -1634,7 +1634,7 @@
         <Doc>
           <Name>.\main.c</Name>
           <ColumnNumber>29</ColumnNumber>
-          <TopLine>64</TopLine>
+          <TopLine>55</TopLine>
           <CurrentLine>64</CurrentLine>
         </Doc>
         <Doc>
@@ -1657,9 +1657,9 @@
         </Doc>
         <Doc>
           <Name>USART.H</Name>
-          <ColumnNumber>3</ColumnNumber>
-          <TopLine>22</TopLine>
-          <CurrentLine>22</CurrentLine>
+          <ColumnNumber>59</ColumnNumber>
+          <TopLine>12</TopLine>
+          <CurrentLine>12</CurrentLine>
         </Doc>
         <Doc>
           <Name>1602.H</Name>

@@ -1,4 +1,4 @@
-unsigned char my[5];
+unsigned char ttldat[5];
  void UsartInit()
 {
 	SCON=0X50;			//设置为工作方式1
@@ -38,7 +38,7 @@ void Timer0Init()
  {		
    unsigned int i;
 	 unsigned int len;
-	 len=sizeof(dat)*2;
+	 len=strlen(dat);
    for(i=0;i<len;i++)
    {	   
    SendChar(dat[i]);
@@ -48,12 +48,13 @@ void SendData()
 {	
     unsigned int i;
     unsigned char a[]="温度:";		   
-	   SendString(a);
+	 //  SendString(a);
+	 SendChar('T');
 	   for(i=0;i<5;i++)
 	   {   if(i==3)
 	   		 SendChar('.');
-	     SendChar(my[i]+0x30);
-    	}  SendChar('C');
+	     SendChar(ttldat[i]+0x30);
+    	}  //SendChar('C');
 	    SendChar('\r');
 	    SendChar('\n');
 	

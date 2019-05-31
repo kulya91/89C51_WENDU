@@ -52,26 +52,18 @@ void lcddat(unsigned char dat)
 	  delayms(1);
 }
 
-void lcdinit()
-{ 	lcdcom(0x38);    //打开，5*8,8位数据
+void lcdinit(char string[])
+{ 	unsigned int i;
+    lcdcom(0x38);    //打开，5*8,8位数据
 	lcdcom(0x0c);
 	lcdcom(0x06);
 	lcddat(0x01);    //清屏
 	lcdcom(0x80); //第一行
-	lcddat('t');
-	lcddat('e');
-	lcddat('m');
-	lcddat('p');
-	lcddat('e');
-	lcddat('r');
-	lcddat('a');
-	lcddat('t');
-	lcddat('u');
-	lcddat('r');
-	lcddat('e');
-	lcddat(':');	
+	for(i=0;i<strlen(string);i++)
+	{
+	lcddat(string[i]);
+	}	
 }
-
 
 
 

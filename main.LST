@@ -1,4 +1,4 @@
-C51 COMPILER V9.01   MAIN                                                                  05/28/2019 19:45:20 PAGE 1   
+C51 COMPILER V9.01   MAIN                                                                  05/31/2019 19:29:35 PAGE 1   
 
 
 C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
@@ -8,105 +8,103 @@ COMPILER INVOKED BY: E:\aastudy\keil\install\C51\BIN\C51.EXE main.c BROWSE DEBUG
 line level    source
 
    1          #include "reg52.h"                       //此文件中定义了单片机的一些特殊功能寄存器
-   2          #include"temp.h"        
-   3          #include"Usart.h"
-   4           #include"1602.h"
-   5          
-   6          typedef unsigned int u16;         //对数据类型进行声明定义
-   7          typedef unsigned char u8;
-   8          
-   9          u8 DisplayData[8];
-  10          u8 code smgduan[10]={0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f};
-  11          void xianshi();
-  12          void delay(u16 i)
-  13          {
-  14   1              while(i--);     
-  15   1      }
+   2          #include "string.h"
+   3          #include"temp.h"        
+   4          #include"Usart.h"
+   5           #include"1602.h"
+   6          
+   7          typedef unsigned int u16;         //对数据类型进行声明定义
+   8          typedef unsigned char u8;
+   9          u8 bai,shi,ge,fen,li;
+  10          u8 DisplayData[8];
+  11          void delay(u16 i)
+  12          {
+  13   1              while(i--);     
+  14   1      }
+  15          
   16          
-  17          
-  18          void datapros(int temp)          
-  19          {
-  20   1              float tp;  
-  21   1              if(temp< 0)                             //当温度值为负数
-  22   1              {
-  23   2                      DisplayData[0] = 0x40;    //   -
-  24   2                      //因为读取的温度是实际温度的补码，所以减1，再取反求出原码
-  25   2                      temp=temp-1;
-  26   2                      temp=~temp;
-  27   2                      tp=temp;
-  28   2                      temp=tp*0.0625*100+0.5; 
-  29   2                      //留两个小数点就*100，+0.5是四舍五入，因为C语言浮点数转换为整型的时候把小数点
-  30   2                      //后面的数自动去掉，不管是否大于0.5，而+0.5之后大于0.5的就是进1了，小于0.5的就
-  31   2                      //算加上0.5，还是在小数点后面。
-  32   2       
-  33   2              }
-  34   1              else
-  35   1              {                       
-  36   2                      DisplayData[0] = 0x00;
-  37   2                      tp=temp;//因为数据处理有小数点所以将温度赋给一个浮点型变量
-  38   2                      //如果温度是正的那么，那么正数的原码就是补码它本身
-  39   2                      temp=tp*0.0625*100+0.5; 
-  40   2                      //留两个小数点就*100，+0.5是四舍五入，因为C语言浮点数转换为整型的时候把小数点
-  41   2                      //后面的数自动去掉，不管是否大于0.5，而+0.5之后大于0.5的就是进1了，小于0.5的就
-  42   2                      //算加上0.5，还是在小数点后面。
-  43   2              }
-  44   1              DisplayData[1] = smgduan[temp / 10000];
-  45   1              DisplayData[2] = smgduan[temp % 10000 / 1000];
-  46   1              DisplayData[3] = smgduan[temp % 1000 / 100] | 0x80;
-  47   1              DisplayData[4] = smgduan[temp % 100 / 10];
-  48   1              DisplayData[5] = smgduan[temp % 10];
-  49   1              my[0]=temp / 10000;
-  50   1              my[1]=temp % 10000 / 1000;
-  51   1              my[2]=temp % 1000 / 100;
-  52   1              my[3]=temp % 100 / 10;
-  53   1              my[4]=temp % 10;
-  54   1      }
-  55          
-C51 COMPILER V9.01   MAIN                                                                  05/28/2019 19:45:20 PAGE 2   
+  17          void datapros(int temp)          
+  18          {
+  19   1              float tp;  
+  20   1              if(temp< 0)                             //当温度值为负数
+  21   1              {
+  22   2                      DisplayData[0] = 0x40;    //   -
+  23   2                      //因为读取的温度是实际温度的补码，所以减1，再取反求出原码
+  24   2                      temp=temp-1;
+  25   2                      temp=~temp;
+  26   2                      tp=temp;
+  27   2                      temp=tp*0.0625*100+0.5; 
+  28   2                      //留两个小数点就*100，+0.5是四舍五入，因为C语言浮点数转换为整型的时候把小数点
+  29   2                      //后面的数自动去掉，不管是否大于0.5，而+0.5之后大于0.5的就是进1了，小于0.5的就
+  30   2                      //算加上0.5，还是在小数点后面。
+  31   2       
+  32   2              }
+  33   1              else
+  34   1              {                       
+  35   2                      DisplayData[0] = 0x00;
+  36   2                      tp=temp;//因为数据处理有小数点所以将温度赋给一个浮点型变量
+  37   2                      //如果温度是正的那么，那么正数的原码就是补码它本身
+  38   2                      temp=tp*0.0625*100+0.5; 
+  39   2                      //留两个小数点就*100，+0.5是四舍五入，因为C语言浮点数转换为整型的时候把小数点
+  40   2                      //后面的数自动去掉，不管是否大于0.5，而+0.5之后大于0.5的就是进1了，小于0.5的就
+  41   2                      //算加上0.5，还是在小数点后面。
+  42   2              }
+  43   1              bai=temp / 10000;
+  44   1      shi=temp % 10000 / 1000;
+  45   1              ge=temp % 1000 / 100;
+  46   1              fen=temp % 100 / 10;
+  47   1              li=temp % 10;
+  48   1               if((li>=0&&li<=9)&&(fen>=0&&fen<=9)&&(ge>=0&&ge<=9)&(shi>=1&&shi<=5)&(bai==0))
+  49   1               {
+  50   2              ttldat[0]=bai; ttldat[1]=shi;ttldat[2]=ge;ttldat[3]=fen;ttldat[4]=li;
+  51   2                      }
+  52   1      }
+  53          
+  54           void xianshi()
+  55          {
+C51 COMPILER V9.01   MAIN                                                                  05/31/2019 19:29:35 PAGE 2   
 
-  56           void xianshi()
-  57          {
-  58   1              lcdcom(0xc5);
-  59   1              lcddat(my[0]+0x30);
-  60   1              lcddat( my[1]+0x30);
-  61   1              lcddat(my[2]+0x30);
-  62   1              lcddat('.');
-  63   1              lcddat(my[3]+0x30);
-  64   1              lcddat(my[4]+0x30);
-  65   1              
-  66   1      }
-  67          
-  68          void main()
-  69          {
-  70   1              lcdinit();
-  71   1      UsartInit();
-  72   1      
-  73   1              while(1)
-  74   1              {
-  75   2                      datapros(Ds18b20ReadTemp()); //数据处理函数
-  76   2              }               
-  77   1      }
-  78          
-  79            void Usart() interrupt 1
-  80          {  u16 i;
-  81   1              TH0=0XFC;       //给定时器赋初值，定时1ms
-  82   1              TL0=0X18;
-  83   1              i++;
-  84   1              if(i==1000)
-  85   1              {
-  86   2                      i=0;
-  87   2                      SendData();
-  88   2                      xianshi();              
-  89   2              }
-  90   1      }       
+  56   1              lcdcom(0xc5);
+  57   1              lcddat(ttldat[0]+0x30);
+  58   1              lcddat( ttldat[1]+0x30);
+  59   1              lcddat(ttldat[2]+0x30);
+  60   1              lcddat('.');
+  61   1              lcddat(ttldat[3]+0x30);
+  62   1              lcddat(ttldat[4]+0x30);
+  63   1              
+  64   1      }
+  65          
+  66          void main()
+  67          {
+  68   1              lcdinit("temperature:");
+  69   1      UsartInit();
+  70   1      
+  71   1              while(1)
+  72   1              {
+  73   2                      datapros(Ds18b20ReadTemp()); //数据处理函数
+  74   2              }               
+  75   1      }
+  76          
+  77            void Usart() interrupt 1
+  78          {  u16 i;
+  79   1              TH0=0XFC;       //给定时器赋初值，定时1ms
+  80   1              TL0=0X18;
+  81   1              i++;
+  82   1              if(i==100)
+  83   1              {
+  84   2                      i=0;
+  85   2                      SendData();
+  86   2                      xianshi();              
+  87   2              }
+  88   1      }       
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    897    ----
-   CONSTANT SIZE    =     16    ----
+   CODE SIZE        =    842    ----
+   CONSTANT SIZE    =     19    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
-   DATA SIZE        =     13      17
+   DATA SIZE        =     18      22
    IDATA SIZE       =   ----    ----
    BIT SIZE         =   ----       1
 END OF MODULE INFORMATION.

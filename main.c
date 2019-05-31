@@ -1,14 +1,13 @@
 #include "reg52.h"			 //此文件中定义了单片机的一些特殊功能寄存器
+#include "string.h"
 #include"temp.h"	
 #include"Usart.h"
  #include"1602.h"
 
 typedef unsigned int u16;	  //对数据类型进行声明定义
 typedef unsigned char u8;
-
+u8 bai,shi,ge,fen,li;
 u8 DisplayData[8];
-u8 code smgduan[10]={0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f};
-void xianshi();
 void delay(u16 i)
 {
 	while(i--);	
@@ -41,33 +40,32 @@ void datapros(int temp)
 		//后面的数自动去掉，不管是否大于0.5，而+0.5之后大于0.5的就是进1了，小于0.5的就
 		//算加上0.5，还是在小数点后面。
 	}
-	DisplayData[1] = smgduan[temp / 10000];
-	DisplayData[2] = smgduan[temp % 10000 / 1000];
-	DisplayData[3] = smgduan[temp % 1000 / 100] | 0x80;
-	DisplayData[4] = smgduan[temp % 100 / 10];
-	DisplayData[5] = smgduan[temp % 10];
-	my[0]=temp / 10000;
-	my[1]=temp % 10000 / 1000;
-	my[2]=temp % 1000 / 100;
-	my[3]=temp % 100 / 10;
-	my[4]=temp % 10;
+	bai=temp / 10000;
+shi=temp % 10000 / 1000;
+	ge=temp % 1000 / 100;
+	fen=temp % 100 / 10;
+	li=temp % 10;
+	 if((li>=0&&li<=9)&&(fen>=0&&fen<=9)&&(ge>=0&&ge<=9)&(shi>=1&&shi<=5)&(bai==0))
+	 {
+	ttldat[0]=bai; ttldat[1]=shi;ttldat[2]=ge;ttldat[3]=fen;ttldat[4]=li;
+		}
 }
 
  void xianshi()
 {
 	lcdcom(0xc5);
-	lcddat(my[0]+0x30);
-	lcddat(	my[1]+0x30);
-	lcddat(my[2]+0x30);
+	lcddat(ttldat[0]+0x30);
+	lcddat(	ttldat[1]+0x30);
+	lcddat(ttldat[2]+0x30);
 	lcddat('.');
-	lcddat(my[3]+0x30);
-	lcddat(my[4]+0x30);
+	lcddat(ttldat[3]+0x30);
+	lcddat(ttldat[4]+0x30);
 	
 }
 
 void main()
 {
-	lcdinit();
+	lcdinit("temperature:");
 UsartInit();
 
 	while(1)
@@ -81,7 +79,7 @@ UsartInit();
 	TH0=0XFC;	//给定时器赋初值，定时1ms
 	TL0=0X18;
 	i++;
-	if(i==1000)
+	if(i==100)
 	{
 		i=0;
 		SendData();
