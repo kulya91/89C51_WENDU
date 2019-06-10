@@ -184,10 +184,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>29</ColumnNumber>
+      <ColumnNumber>31</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>55</TopLine>
-      <CurrentLine>64</CurrentLine>
+      <TopLine>34</TopLine>
+      <CurrentLine>54</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
@@ -198,10 +198,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>13</ColumnNumber>
+      <ColumnNumber>6</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>121</TopLine>
-      <CurrentLine>140</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>11</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\temp.c</PathWithFileName>
       <FilenameWithoutPath>temp.c</FilenameWithoutPath>
@@ -237,33 +237,7 @@
   </Group>
 
   <AlienFiles>
-    <PathWithFilename>E:\AASTUDY\KEIL\INSTALL\C51\INC\REG52.H</PathWithFilename>
-    <TopLine>1</TopLine>
-    <CurrentLine>9</CurrentLine>
-    <Constant>0</Constant>
-    <WindowPosition>
-      <length>0</length>
-      <flags>0</flags>
-      <showCmd>0</showCmd>
-      <MinPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MinPosition>
-      <MaxPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MaxPosition>
-      <NormalPosition>
-        <Top>0</Top>
-        <Left>0</Left>
-        <Right>0</Right>
-        <Bottom>0</Bottom>
-      </NormalPosition>
-    </WindowPosition>
-  </AlienFiles>
-
-  <AlienFiles>
-    <PathWithFilename>E:\aastudy\keil\资料\实验程序\基础实验例程\实验17：DS18B20温度传感器\TEMP.H</PathWithFilename>
+    <PathWithFilename>C:\Users\hhh\Desktop\温度\TEMP.H</PathWithFilename>
     <TopLine>1</TopLine>
     <CurrentLine>20</CurrentLine>
     <Constant>0</Constant>
@@ -289,12 +263,12 @@
   </AlienFiles>
 
   <WinLayout>
-    <sActiveDebugView>默认</sActiveDebugView>
+    <sActiveDebugView>Default</sActiveDebugView>
     <iActiveDebugViewLocation>1</iActiveDebugViewLocation>
     <sActiveBuildView>Build</sActiveBuildView>
     <iActiveBuildViewLocation>0</iActiveBuildViewLocation>
     <View>
-      <ViewName>默认</ViewName>
+      <ViewName>Default</ViewName>
       <ViewType>1</ViewType>
       <Window>
         <WinId>59392</WinId>
@@ -374,7 +348,7 @@
       <Window>
         <WinId>197</WinId>
         <ItemNo>4</ItemNo>
-        <Name>编译输出</Name>
+        <Name>Build Output</Name>
         <AnchorWinID>0</AnchorWinID>
         <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
@@ -399,7 +373,7 @@
       <Window>
         <WinId>198</WinId>
         <ItemNo>5</ItemNo>
-        <Name>指令</Name>
+        <Name>Command</Name>
         <AnchorWinID>197</AnchorWinID>
         <AnchorWinName></AnchorWinName>
         <OtherWinID>197</OtherWinID>
@@ -424,7 +398,7 @@
       <Window>
         <WinId>199</WinId>
         <ItemNo>6</ItemNo>
-        <Name>批量查找</Name>
+        <Name>Find in Files</Name>
         <AnchorWinID>197</AnchorWinID>
         <AnchorWinName></AnchorWinName>
         <OtherWinID>197</OtherWinID>
@@ -574,7 +548,7 @@
       <Window>
         <WinId>1944</WinId>
         <ItemNo>12</ItemNo>
-        <Name>调用堆栈</Name>
+        <Name>Call Stack</Name>
         <AnchorWinID>197</AnchorWinID>
         <AnchorWinName></AnchorWinName>
         <OtherWinID>197</OtherWinID>
@@ -599,7 +573,7 @@
       <Window>
         <WinId>1507</WinId>
         <ItemNo>13</ItemNo>
-        <Name>调用堆栈</Name>
+        <Name>Call Stack</Name>
         <AnchorWinID>1944</AnchorWinID>
         <AnchorWinName></AnchorWinName>
         <OtherWinID>197</OtherWinID>
@@ -799,7 +773,7 @@
       <Window>
         <WinId>1506</WinId>
         <ItemNo>21</ItemNo>
-        <Name>符号</Name>
+        <Name>Symbols</Name>
         <AnchorWinID>1944</AnchorWinID>
         <AnchorWinName></AnchorWinName>
         <OtherWinID>197</OtherWinID>
@@ -824,7 +798,7 @@
       <Window>
         <WinId>1005</WinId>
         <ItemNo>22</ItemNo>
-        <Name>工程</Name>
+        <Name>Project</Name>
         <AnchorWinID>0</AnchorWinID>
         <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
@@ -849,7 +823,7 @@
       <Window>
         <WinId>109</WinId>
         <ItemNo>23</ItemNo>
-        <Name>书籍</Name>
+        <Name>Books</Name>
         <AnchorWinID>1005</AnchorWinID>
         <AnchorWinName></AnchorWinName>
         <OtherWinID>1005</OtherWinID>
@@ -874,7 +848,7 @@
       <Window>
         <WinId>195</WinId>
         <ItemNo>24</ItemNo>
-        <Name>函数</Name>
+        <Name>Functions</Name>
         <AnchorWinID>1005</AnchorWinID>
         <AnchorWinName></AnchorWinName>
         <OtherWinID>1005</OtherWinID>
@@ -899,7 +873,7 @@
       <Window>
         <WinId>196</WinId>
         <ItemNo>25</ItemNo>
-        <Name>模板</Name>
+        <Name>Templates</Name>
         <AnchorWinID>1005</AnchorWinID>
         <AnchorWinName></AnchorWinName>
         <OtherWinID>1005</OtherWinID>
@@ -924,7 +898,7 @@
       <Window>
         <WinId>38003</WinId>
         <ItemNo>26</ItemNo>
-        <Name>寄存器</Name>
+        <Name>Registers</Name>
         <AnchorWinID>1005</AnchorWinID>
         <AnchorWinName></AnchorWinName>
         <OtherWinID>1005</OtherWinID>
@@ -1474,7 +1448,7 @@
       <Window>
         <WinId>203</WinId>
         <ItemNo>48</ItemNo>
-        <Name>反汇编</Name>
+        <Name>Disassembly</Name>
         <AnchorWinID>0</AnchorWinID>
         <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
@@ -1499,7 +1473,7 @@
       <Window>
         <WinId>1913</WinId>
         <ItemNo>49</ItemNo>
-        <Name>指令跟踪</Name>
+        <Name>Instruction Trace</Name>
         <AnchorWinID>203</AnchorWinID>
         <AnchorWinName></AnchorWinName>
         <OtherWinID>203</OtherWinID>
@@ -1524,7 +1498,7 @@
       <Window>
         <WinId>35824</WinId>
         <ItemNo>50</ItemNo>
-        <Name>逻辑分析器</Name>
+        <Name>Logic Analyzer</Name>
         <AnchorWinID>0</AnchorWinID>
         <AnchorWinName></AnchorWinName>
         <OtherWinID>0</OtherWinID>
@@ -1549,7 +1523,7 @@
       <Window>
         <WinId>343</WinId>
         <ItemNo>51</ItemNo>
-        <Name>性能分析器</Name>
+        <Name>Performance Analyzer</Name>
         <AnchorWinID>203</AnchorWinID>
         <AnchorWinName></AnchorWinName>
         <OtherWinID>203</OtherWinID>
@@ -1574,7 +1548,7 @@
       <Window>
         <WinId>204</WinId>
         <ItemNo>52</ItemNo>
-        <Name>性能分析器</Name>
+        <Name>Performance Analyzer</Name>
         <AnchorWinID>203</AnchorWinID>
         <AnchorWinName></AnchorWinName>
         <OtherWinID>203</OtherWinID>
@@ -1599,7 +1573,7 @@
       <Window>
         <WinId>346</WinId>
         <ItemNo>53</ItemNo>
-        <Name>代码作用范围</Name>
+        <Name>Code Coverage</Name>
         <AnchorWinID>203</AnchorWinID>
         <AnchorWinName></AnchorWinName>
         <OtherWinID>203</OtherWinID>
@@ -1629,19 +1603,19 @@
     <ActiveMDIGroup>0</ActiveMDIGroup>
     <MDIGroup>
       <Size>100</Size>
-      <ActiveTab>4</ActiveTab>
+      <ActiveTab>0</ActiveTab>
       <Documents>
         <Doc>
           <Name>.\main.c</Name>
-          <ColumnNumber>29</ColumnNumber>
-          <TopLine>55</TopLine>
-          <CurrentLine>64</CurrentLine>
+          <ColumnNumber>31</ColumnNumber>
+          <TopLine>34</TopLine>
+          <CurrentLine>54</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\temp.c</Name>
-          <ColumnNumber>13</ColumnNumber>
-          <TopLine>121</TopLine>
-          <CurrentLine>140</CurrentLine>
+          <ColumnNumber>6</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>11</CurrentLine>
         </Doc>
         <Doc>
           <Name>TEMP.H</Name>
@@ -1650,20 +1624,14 @@
           <CurrentLine>20</CurrentLine>
         </Doc>
         <Doc>
-          <Name>E:\AASTUDY\KEIL\INSTALL\C51\INC\REG52.H</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>9</CurrentLine>
-        </Doc>
-        <Doc>
           <Name>USART.H</Name>
-          <ColumnNumber>59</ColumnNumber>
-          <TopLine>12</TopLine>
-          <CurrentLine>12</CurrentLine>
+          <ColumnNumber>17</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>11</CurrentLine>
         </Doc>
         <Doc>
           <Name>1602.H</Name>
-          <ColumnNumber>13</ColumnNumber>
+          <ColumnNumber>45</ColumnNumber>
           <TopLine>1</TopLine>
           <CurrentLine>1</CurrentLine>
         </Doc>
